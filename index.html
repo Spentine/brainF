@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="main.js", type="module"> </script>
+<style>
+
+@font-face {
+  font-family: "Cabin";
+  src: url("Cabin-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Ubuntu Mono";
+  src: url("UbuntuMono-Regular.ttf");
+}
+
+body {
+  background-color: #222;
+  font-family: "Cabin";
+  font-weight: normal;
+}
+
+textarea, pre, button, input {
+  background-color: #333;
+  font-family: "Ubuntu Mono";
+}
+
+pre {
+  font-size: calc(1vw + 12px);
+}
+
+p, h1, h2, h3, pre, textarea, button, input {
+  color: #fff;
+  font-weight: inherit;
+}
+
+p, h1, h2, h3 {
+  margin: 5px;
+}
+
+h1 {
+  font-size: 36px;
+}
+
+h2 {
+  font-size: 28px;
+}
+
+p {
+  font-size: 16px;
+}
+
+.centeredText {
+  text-align: center;
+}
+
+#programData {
+  margin-left: 5%;
+  width: 90%;
+  font-size: 20px;;
+}
+
+#programOutput {
+  margin-left: 3%;
+  width: 94%;
+}
+
+#startButton {
+  font-size: 24px;
+  font-family: inherit;
+  margin: 5px;
+  width: 300px;
+}
+
+#compileButton {
+  font-size: 24px;
+  font-family: inherit;
+  margin: 5px;
+  width: 300px;
+}
+
+#programInput {
+  font-size: 24px;
+  font-family: "Sans-Serif";
+  margin-left: calc(50% - 100px);
+  width: 200px;
+}
+
+#buttons {
+  margin: 10px;
+}
+
+#description {
+  margin: 10px 20px 10px 20px;
+}
+
+hr {
+  margin: 20px;
+  border-color: #888;
+}
+
+</style>
+</head>
+<body>
+
+<h1 class="centeredText"> BrainFuck </h1>
+
+<hr>
+
+<div id="description">
+
+<h2> How to Use </h2>
+<p> To use the program, simply paste a BrainFuck program into the large box. A demo program spawns in the box when the page is loaded. To run the program, click the 'Interpret Program' button or the 'Compile Program' button. Compiling the program yields higher speeds than interpreting the program. It may also be possible to interact with the program using the input box at the bottom of the screen. When the box turns more white, the program is requesting an input. To view the compiled function, open the developer tools and press the 'Compile Program' button. The script should log the generated function into the console. The function cannot be used on its own, as it requires functions in the main script to display the results and to input text. </p>
+
+<br>
+<h3 class="centeredText"> Have Fun! </h3>
+</div>
+
+<hr>
+
+<h2 class="centeredText"> Input Brainfuck Program: </h2>
+<textarea rows="16" cols="128" id="programData">+[>>>->-[>->----<<<]>>]>.---.>+..+++.>>.<.>>---.<<<.+++.------.<-.>>+.</textarea>
+
+<br>
+
+<div id="buttons">
+<button id="startButton"> Interpret Program </button>
+<button id="compileButton"> Compile Program </button>
+</div>
+
+<hr>
+
+<h2 class="centeredText"> Output: </h2>
+
+<pre id="programOutput"> </pre>
+
+<hr>
+
+<h2 class="centeredText"> Input: </h2>
+
+<input id="programInput"> </input>
+
+<br><br><br><br><br><br>
+
+</body>
+</html>
